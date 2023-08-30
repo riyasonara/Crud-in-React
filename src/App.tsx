@@ -1,12 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Create from './components/Create';
 import ReadData from './components/Read';
+import {Routes,Route} from "react-router-dom"
 
 function App() {
   return (
     <>
-    <ReadData/>
+    <Routes>
+      <Route path='/' element={<ReadData/>}/>
+      <Route path='/Create' element={<Create/>}/>
+    </Routes>
     </>
   );
 }
